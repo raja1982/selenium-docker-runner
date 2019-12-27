@@ -25,9 +25,7 @@ services:
     environment:
       - BROWSER=firefox
       - HUB_HOST=hub
-      - MODULE=book-flight-module.xml
-    volumes:
-      - C:/Users/shanmra/Desktop/DockerFiles/dockercompose/book-result:/usr/share/udemy/test-output
+      - MODULE=book-flight-module.xml    
   book-flight-module2:
     image: rajasha/selenium-docker
     depends_on:
@@ -36,9 +34,7 @@ services:
     environment:
       - BROWSER=chrome
       - HUB_HOST=hub
-      - MODULE=book-flight-module.xml
-    volumes:
-      - C:/Users/shanmra/Desktop/DockerFiles/dockercompose/book-result:/usr/share/udemy/test-output
+      - MODULE=book-flight-module.xml    
   search-module1:
     image: rajasha/selenium-docker
     depends_on:
