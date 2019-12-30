@@ -32,9 +32,7 @@ services:
     environment:
       - BROWSER=chrome
       - HUB_HOST=hub
-      - MODULE=book-flight-module.xml
-    volumes:
-      - C:/Users/DockerHost/TestResults:/Users/DockerHost/Selenium/test-output    
+      - MODULE=book-flight-module.xml     
   search-module1:
     image: rajasha/selenium-docker
     depends_on:

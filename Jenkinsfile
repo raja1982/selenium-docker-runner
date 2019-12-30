@@ -2,6 +2,11 @@ pipeline {
     // master executor should be set to 0
     agent any
     stages {
+	stage("Pull Latest Image"){
+	    steps{
+		bat "docker pull rajasha/selenium-docker"
+            }
+        }
         stage("Start Grid") {
             steps {
                 //sh
@@ -13,11 +18,10 @@ pipeline {
                 bat "docker-compose up book-flight-module2"
             }
         }
-    }  
-    post{
-        always{
-                archiveArtifacts artifacts: 'C:/Users/DockerHost/TestResults'
-            	bat "docker-compose down"
-	}
-    }        
+	stage("Exit Grid") {
+	    steps {
+                bat "docker-compose down"
+            }
+        }    
+    }    
 }
