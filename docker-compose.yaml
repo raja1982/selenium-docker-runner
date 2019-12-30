@@ -34,7 +34,7 @@ services:
       - HUB_HOST=hub
       - MODULE=book-flight-module.xml
     volumes:
-      - C:/Users/shanmra/Desktop/DockerFiles/workspace/SELENIUM_DOCKER_RUNNER/output/book-result:/C:/Users/DockerHost/Selenium/test-output    
+      - C:/Users/shanmra/Desktop/DockerFiles/workspace/SELENIUM_DOCKER_RUNNER/output/book-result:/Users/DockerHost/Selenium/test-output    
   search-module1:
     image: rajasha/selenium-docker
     depends_on:
