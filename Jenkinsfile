@@ -13,12 +13,11 @@ pipeline {
                 bat "docker-compose up book-flight-module2"
             }
         }
-        stage("Stop Grid") {
-            steps {
-                //sh
-                //bat "docker build -t='rajasha/selenium-docker' ."
-                bat "docker-compose down"   
-	    }
-        }        
-    }
+    }  
+    post{
+        always{
+                archiveArtifacts artifacts: 'output/**'
+            	bat "docker-compose down"
+	}
+    }        
 }
