@@ -16,7 +16,7 @@ pipeline {
     }  
     post{
         always{
-                archiveArtifacts artifacts: '/Users/shanmra/Desktop/DockerFiles/workspace/SELENIUM_DOCKER_RUNNER/output/book-result'
+                archiveArtifacts artifacts: 'C:/Users/DockerHost/TestResults'
             	bat "docker-compose down"
 	}
     }        
