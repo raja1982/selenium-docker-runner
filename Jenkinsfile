@@ -21,7 +21,7 @@ pipeline {
     }
     post{
         always{
-            archiveArtifacts artifacts: 'C:/Users/DockerHost/c/**'  
+            archiveArtifacts artifacts: 'C:/Users/DockerHost/c/test-output'  
             bat "docker-compose down"
         }
     }
