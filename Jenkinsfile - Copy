@@ -17,12 +17,11 @@ pipeline {
 	    steps {
                 bat "docker-compose up book-flight-module2"
             }
-        }	
-    }
-    post{
-        always{
-            archiveArtifacts artifacts: 'C:/Users/DockerHost/c/**'  
-            bat "docker-compose down"
         }
-    }
+	stage("Exit Grid") {
+	    steps {
+                bat "docker-compose down"
+            }
+        }    
+    }    
 }
