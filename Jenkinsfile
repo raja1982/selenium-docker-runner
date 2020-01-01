@@ -21,7 +21,7 @@ pipeline {
     }
     post{
         always{
-            archiveArtifacts artifacts: 'Users/DockerHost/c/test-output/**/*.xml'  
+            archiveArtifacts artifacts: 'test-output/**/*.xml'  
             bat "docker-compose down"
         }
     }
